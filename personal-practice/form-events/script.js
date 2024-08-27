@@ -1,5 +1,4 @@
 // TODO: resume at oninvalid
-// GIT TEST
 
 // const input = document.querySelector('input');
 // const log = document.querySelector('#values');
