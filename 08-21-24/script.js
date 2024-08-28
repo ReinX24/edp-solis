@@ -1,11 +1,11 @@
 // Selecting the elements on the page
-const mouseClick = document.querySelector("#mouse-click");
-const dblMouseClick = document.querySelector("#dbl-mouse-click");
-const mouseDown = document.querySelector("#mouse-down");
-const mouseUp = document.querySelector("#mouse-up");
-const mouseOver = document.querySelector("#mouse-over");
-const mouseOut = document.querySelector("#mouse-out");
-const mouseMove = document.querySelector("#mouse-move");
+const mouseClick = document.querySelector('#mouse-click');
+const dblMouseClick = document.querySelector('#dbl-mouse-click');
+const mouseDown = document.querySelector('#mouse-down');
+const mouseUp = document.querySelector('#mouse-up');
+const mouseOver = document.querySelector('#mouse-over');
+const mouseOut = document.querySelector('#mouse-out');
+const mouseMove = document.querySelector('#mouse-move');
 
 // Adding event listeners to the elements on the page
 // mouseClick.addEventListener("click", () => {
@@ -13,7 +13,7 @@ const mouseMove = document.querySelector("#mouse-move");
 // });
 
 mouseClick.onclick = () => {
-  alert("Fired when the user clicks an element.");
+	alert('Fired when the user clicks an element.');
 };
 
 // dblMouseClick.addEventListener("dblclick", () => {
@@ -21,7 +21,7 @@ mouseClick.onclick = () => {
 // });
 
 dblMouseClick.ondblclick = () => {
-  alert("Fired when the user double-clicks an element.");
+	alert('Fired when the user double-clicks an element.');
 };
 
 // mouseDown.addEventListener("mousedown", () => {
@@ -29,7 +29,7 @@ dblMouseClick.ondblclick = () => {
 // });
 
 mouseDown.onmousedown = () => {
-  alert("Fired when the user presses the mouse button down.");
+	alert('Fired when the user presses the mouse button down.');
 };
 
 // mouseUp.addEventListener("mouseup", () => {
@@ -37,7 +37,7 @@ mouseDown.onmousedown = () => {
 // });
 
 mouseUp.onmouseup = () => {
-  alert("Fired when the user releases the mouse button.");
+	alert('Fired when the user releases the mouse button.');
 };
 
 // mouseOver.addEventListener("mouseover", () => {
@@ -45,7 +45,7 @@ mouseUp.onmouseup = () => {
 // });
 
 mouseOver.onmouseover = () => {
-  alert("Fired when the user moves the mouse over an element.");
+	alert('Fired when the user moves the mouse over an element.');
 };
 
 // mouseOut.addEventListener("mouseout", () => {
@@ -53,7 +53,7 @@ mouseOver.onmouseover = () => {
 // });
 
 mouseOut.onmouseout = () => {
-  alert("Fired when the user moves the mouse out of an element.");
+	alert('Fired when the user moves the mouse out of an element.');
 };
 
 // mouseMove.addEventListener("mousemove", () => {
@@ -61,5 +61,5 @@ mouseOut.onmouseout = () => {
 // });
 
 mouseMove.onmousemove = () => {
-  alert("Fired when the user moves the mouse over an element.");
+	alert('Fired when the user moves the mouse over an element.');
 };
