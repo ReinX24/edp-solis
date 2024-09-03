@@ -10,7 +10,27 @@
 
 <body>
     <main>
-        <div class="feedback" id="feedback"></div>
+        <div class="feedback" id="feedback">
+            <p class="hidden" id="usernameLength"></p>
+
+            <div class="hidden error" id="usernameError">
+                <h4>Invalid Username</h4>
+                <p>Username should be at least 5 characters long.</p>
+            </div>
+
+            <div class="hidden error" id="passwordError">
+                <h4>Invalid Password</h4>
+                <p>Password should be at least 8 characters long and contain both letters and numbers.</p>
+            </div>
+
+            <div class="hidden error" id="emailError">
+                <h4>Invalid Email</h4>
+                <p>Email should follow the standard email format</p>
+            </div>
+
+            <h4 class="hidden success-message" id="submitSuccessMessage">Submitted Form Successfully!</h4>
+            <h4 class="hidden error-message" id="submitErrorMessage">Form Submission Error!</h4>
+        </div>
 
         <form id="myForm">
             <table border="1" cellpadding="1" cellspacing="1">

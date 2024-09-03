@@ -23,3 +23,21 @@ table {
 table td {
 	padding: 5px;
 }
+
+.hidden {
+	display: none;
+}
+
+.error {
+	color: #ff0000;
+}
+
+.success-message {
+	text-align: center;
+	color: #009900;
+}
+
+.error-message {
+	text-align: center;
+	color: #ff0000;
+}
