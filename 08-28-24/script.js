@@ -63,12 +63,6 @@ function validateUsername() {
 	}
 }
 
-usernameInput.addEventListener('change', () => {
-	validateUsername();
-	submitSuccessMessage.classList.add('hidden');
-	submitErrorMessage.classList.add('hidden');
-});
-
 function validatePassword() {
 	// Passwords should at least be 8 characters long and contain both letters
 	// and numbers
@@ -83,12 +77,6 @@ function validatePassword() {
 	}
 }
 
-passwordInput.addEventListener('change', () => {
-	validatePassword();
-	submitSuccessMessage.classList.add('hidden');
-	submitErrorMessage.classList.add('hidden');
-});
-
 function validateEmail() {
 	// Email should follow the standard email format
 	if (!emailInput.value.match(/^\S+@\S+\.\S+$/)) {
@@ -97,6 +85,18 @@ function validateEmail() {
 		emailError.classList.add('hidden');
 	}
 }
+
+usernameInput.addEventListener('change', () => {
+	validateUsername();
+	submitSuccessMessage.classList.add('hidden');
+	submitErrorMessage.classList.add('hidden');
+});
+
+passwordInput.addEventListener('change', () => {
+	validatePassword();
+	submitSuccessMessage.classList.add('hidden');
+	submitErrorMessage.classList.add('hidden');
+});
 
 emailInput.addEventListener('change', () => {
 	validateEmail();
@@ -130,4 +130,26 @@ myForm.addEventListener('submit', (event) => {
 	}
 });
 
-// TODO: Checkpoint 3
+// Checkpoint 3
+// Implement a function to detect when the browser window is resized
+function updateWindowSize() {
+	const width = document.documentElement.clientWidth;
+	const height = document.documentElement.clientHeight;
+
+	// Display a message in the <p> element with the new window dimensions
+	// whenever a resize event occurs.
+	document.getElementById(
+		'windowSize'
+	).textContent = `Width: ${width}, Height: ${height}`;
+
+	// Add an alert that triggers if the window is resized below a certain
+	// width (e.g., 500px)
+	if (width < 500) {
+		document.getElementById('resizeMessage').textContent =
+			'Width below 500px!';
+	} else {
+		document.getElementById('resizeMessage').textContent = '';
+	}
+}
+
+window.addEventListener('resize', updateWindowSize);
