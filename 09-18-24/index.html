@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task App</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+
+<body>
+
+    <main class="container">
+        <form id="taskForm" class="mt-4">
+            <div class="mb-3">
+                <label for="taskInput" class="form-label fs-4">Add Task</label>
+                <input type="text" id="taskInput" placeholder="Add new task" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Add Task</button>
+        </form>
+
+        <ul class="list-group mt-4" id="taskList"></ul>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
