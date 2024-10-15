@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Animation</title>
+    <style>
+        #card-content {
+            border-style: solid;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="animate-btn">Animate</button>
+
+    <div class="card" id="card-content">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt ut beatae sequi iure illo sunt laudantium
+            ipsa mollitia alias nam ex qui quis blanditiis minus voluptate perspiciatis facere excepturi vitae, porro
+            doloremque numquam exercitationem. Porro delectus molestias numquam. Atque dolorem praesentium ad
+            reprehenderit rem beatae facere accusamus fuga voluptas incidunt.</p>
+    </div>
+
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            let animated = false;
+
+            $("#animate-btn").click(function () {
+                // $("#card-content").animate({
+                //     width: "70%",
+                //     opacity: 0.5
+                // }, 2000);
+
+                // $("#card-content")
+                //     .slideUp(1000)
+                //     .slideDown(1000)
+                //     .fadeOut(1000);
+
+                // $("#card-content")
+                //     .fadeOut(2000)
+                //     .delay(1000)
+                //     .fadeIn(2000);
+
+                if (!animated) {
+                    $("#card-content")
+                        .animate(
+                            {
+                                opacity: 1,
+                                width: "50%"
+                            },
+                            2000,
+                            'easeInOutQuad',
+                            function () {
+                                console.log('Animation complete!');
+                                animated = true;
+                            });
+                } else {
+                    $("#card-content")
+                        .animate(
+                            {
+                                opacity: 1,
+                                width: "100%"
+                            },
+                            2000,
+                            'easeInOutQuad',
+                            function () {
+                                console.log('Animation complete!');
+                                animated = false;
+                            });
+                }
+            })
+        });
+    </script>
+</body>
+
+</html>

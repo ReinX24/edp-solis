@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Effects</title>
+    <style>
+        #card-content {
+            border-style: solid;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn-hide">Hide Content</button>
+    <button id="btn-show">Show Content</button>
+    <button id="btn-toggle">Toggle Content</button>
+    <button id="btn-fadeOut">Fade Out</button>
+    <button id="btn-fadeIn">Fade In</button>
+    <button id="btn-slideUp">Slide Up</button>
+    <button id="btn-slideDown">Slide Down</button>
+    <button id="btn-slideToggle">Slide Toggle</button>
+
+    <div class="card" id="card-content">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt ut beatae sequi iure illo sunt laudantium
+            ipsa mollitia alias nam ex qui quis blanditiis minus voluptate perspiciatis facere excepturi vitae, porro
+            doloremque numquam exercitationem. Porro delectus molestias numquam. Atque dolorem praesentium ad
+            reprehenderit rem beatae facere accusamus fuga voluptas incidunt.</p>
+    </div>
+
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            const card = $("#card-content");
+
+            $("#btn-hide").click(function () {
+                card.hide();
+            });
+
+            $("#btn-show").click(function () {
+                card.show();
+            });
+
+            $("#btn-toggle").click(function () {
+                card.toggle();
+            });
+
+            $("#btn-fadeOut").click(function () {
+                card.fadeOut();
+            });
+
+            $("#btn-fadeIn").click(function () {
+                card.fadeIn();
+            });
+
+            $("#btn-slideUp").click(function () {
+                card.slideUp(1000); // 1 second
+            });
+
+            $("#btn-slideDown").click(function () {
+                card.slideDown(500); // 0.5 second
+            });
+
+            $("#btn-slideToggle").click(function () {
+                card.slideToggle();
+            });
+        });
+    </script>
+</body>
+
+</html>
