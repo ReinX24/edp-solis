@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Lab Activity - 10/16/2024</title>
+    <style>
+        #text-div {
+            border-style: solid;
+            background-color: beige;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <select id="effect-select">
+
+            <option value="fadeIn">Fade In</option>
+            <option value="fadeOut">Fade Out</option>
+            <option value="slideUp">Slide Up</option>
+            <option value="slideDown">Slide Down</option>
+            <select>
+    </div>
+
+    <hr>
+
+    <div>
+        <label for="duration">Duration:</label>
+        <input type="number" id="duration">
+    </div>
+
+    <hr>
+
+    <div>
+        <textarea id="content"></textarea>
+        <button id="btn-event">Apply Effect</button>
+    </div>
+
+    <hr>
+
+    <div id="text-div">
+        <p id="text-content">I've put my trust in you, pushed far as I can go. For all this, there's only one thing you
+            should know. I
+            tried so hard and got so far. But in the end, it doesn't even matter. I had to fall to lose it all. But in
+            the end, it doesn't even matter</p>
+    </div>
+
+    <!-- Adding jquery and jquery ui for easing effects -->
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <!-- Javascript file -->
+    <script src="script.js"></script>
+</body>
+
+</html>
