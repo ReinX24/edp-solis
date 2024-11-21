@@ -19,6 +19,7 @@ $("button").click(function () {
 */
 
 //* GET request, returns a json file
+// URL: https://jsonplaceholder.typicode.com/posts (GET REQUEST)
 /*
 $.ajax({
 	url: "https://jsonplaceholder.typicode.com/posts",
@@ -35,7 +36,31 @@ $.ajax({
 });
 */
 
+// Using the load function to get data
+/*
+$("#content").load(
+	"https://jsonplaceholder.typicode.com/posts",
+	function (result) {
+		for (let eachResult of JSON.parse(result)) {
+			console.log(eachResult.title);
+		}
+	}
+);
+*/
+
+// Using the load function to post data
+$("#content").load(
+	"https://jsonplaceholder.typicode.com/posts",
+	{
+		name: "Rein",
+	},
+	function (result) {
+		console.log(result);
+	}
+);
+
 //* POST request, returns the data of the new object
+// URL: https://jsonplaceholder.typicode.com/posts (POST REQUEST)
 $("button").click(function () {
 	$.ajax({
 		url: "https://jsonplaceholder.typicode.com/posts",
