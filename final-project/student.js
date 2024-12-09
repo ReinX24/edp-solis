@@ -13,7 +13,7 @@ $(document).ready(function () {
 				const id = document.createElement("td");
 				id.textContent = responseItem.id;
 
-                newRow.append(id);
+				newRow.append(id);
 
 				const firstName = document.createElement("td");
 				firstName.textContent = responseItem.fname;
@@ -50,17 +50,45 @@ $(document).ready(function () {
 
 				newRow.append(postalCode);
 
-                // TODO: add other fields
+				const section = document.createElement("td");
+				section.textContent = responseItem.section;
 
-                const editBtnRow = document.createElement("td");
+				newRow.append(section);
 
-                const editBtn = document.createElement("a");
-                editBtn.className = "btn btn-primary";
-                editBtn.textContent = 'Edit';
-                editBtn.href = "student_edit.html?id=" + responseItem.id;
+				const state = document.createElement("td");
+				state.textContent = responseItem.state;
 
-                editBtnRow.append(editBtn);
-                newRow.append(editBtnRow)
+				newRow.append(state);
+
+				const studentNumber = document.createElement("td");
+				studentNumber.textContent = responseItem.student_number;
+
+				newRow.append(studentNumber);
+
+				const yearLevel = document.createElement("td");
+				yearLevel.textContent = responseItem.year_level;
+
+				newRow.append(yearLevel);
+
+				const editBtnRow = document.createElement("td");
+
+				const editBtn = document.createElement("a");
+				editBtn.className = "btn btn-secondary";
+				editBtn.textContent = "Edit";
+				editBtn.href = "student_edit.html?id=" + responseItem.id;
+
+				editBtnRow.append(editBtn);
+				newRow.append(editBtnRow);
+
+				const deleteBtnRow = document.createElement("td");
+
+				const deleteBtn = document.createElement("a");
+				deleteBtn.className = "btn btn-danger";
+				deleteBtn.textContent = "Delete";
+				deleteBtn.href = "student_delete.html?id=" + responseItem.id;
+
+				deleteBtnRow.append(deleteBtn);
+				newRow.append(deleteBtnRow);
 
 				$("#studentTable").append(newRow);
 			});
