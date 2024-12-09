@@ -2,7 +2,7 @@ $(document).ready(function () {
 	$.ajax({
 		type: "GET",
 		url: "https://finalproject.site/api/v1/students",
-		crossDomain: true,
+		// crossDomain: true,
 		dataType: "json",
 		success: function (response) {
 			console.log(response);
@@ -70,25 +70,28 @@ $(document).ready(function () {
 
 				newRow.append(yearLevel);
 
-				const editBtnRow = document.createElement("td");
+				const operationsData = document.createElement("td");
+				const operationsContainer = document.createElement("div");
+				operationsContainer.className =
+					"d-flex justify-content-center gap-2";
 
 				const editBtn = document.createElement("a");
 				editBtn.className = "btn btn-secondary";
 				editBtn.textContent = "Edit";
 				editBtn.href = "student_edit.html?id=" + responseItem.id;
 
-				editBtnRow.append(editBtn);
-				newRow.append(editBtnRow);
-
-				const deleteBtnRow = document.createElement("td");
+				operationsContainer.append(editBtn);
 
 				const deleteBtn = document.createElement("a");
 				deleteBtn.className = "btn btn-danger";
 				deleteBtn.textContent = "Delete";
 				deleteBtn.href = "student_delete.html?id=" + responseItem.id;
 
-				deleteBtnRow.append(deleteBtn);
-				newRow.append(deleteBtnRow);
+				operationsContainer.append(deleteBtn);
+				
+				operationsData.append(operationsContainer);
+
+				newRow.append(operationsData);
 
 				$("#studentTable").append(newRow);
 			});

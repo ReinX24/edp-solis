@@ -1,0 +1,6 @@
+# TODO LIST
+
+- CRUD User (Next)
+- CRUD Student (Current)
+- CRUD Movie (Last)
+- CRUD Products X
