@@ -1,4 +1,7 @@
 $(document).ready(function () {
+
+	$("#userForm").hide();
+
 	const queryString = window.location.search;
 	const urlParams = new URLSearchParams(queryString);
 
@@ -17,8 +20,7 @@ $(document).ready(function () {
 			$("#state").val(response.state);
 			$("#postalCode").val(response.postal_code);
 
-			// console.log(response);
-			// Adding the elements to our page
+			$("#userForm").fadeIn(1000);
 		},
 	});
 
@@ -45,17 +47,18 @@ $(document).ready(function () {
 			postal_code: postalCode,
 		};
 
-        console.log(updatedUserData);
+		console.log(updatedUserData);
 
-        $.ajax({
-            type: "PUT",
-            url: "https://finalproject.site/api/v1/users/" + urlParams.get("id"),
-            data: updatedUserData,
-            dataType: "json",
-            success: function (response) {
-                alert("Successfully updated user!");
+		$.ajax({
+			type: "PUT",
+			url:
+				"https://finalproject.site/api/v1/users/" + urlParams.get("id"),
+			data: updatedUserData,
+			dataType: "json",
+			success: function (response) {
+				alert("Successfully updated user!");
 				window.location.href = "/final-project/user/user.html";
-            }
-        });
+			},
+		});
 	});
 });

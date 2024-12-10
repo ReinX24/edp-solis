@@ -6,6 +6,9 @@ $(document).ready(function () {
 			url: "https://finalproject.site/api/v1/users",
 			dataType: "json",
 			success: function (response) {
+
+				$("#usersTableBody").hide();
+
 				response.forEach((user) => {
 					// console.log(user);
 					const newRow = document.createElement("tr");
@@ -79,7 +82,7 @@ $(document).ready(function () {
 
 					newRow.append(operationsData);
 
-					$("#usersTableBody").append(newRow);
+					$("#usersTableBody").append(newRow).fadeIn(1000);
 				});
 			},
 		});

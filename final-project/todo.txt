@@ -6,6 +6,7 @@
 - Editing Products X
 - Removing Products X
 - Validating Fields
+- Fade Effects X
 
 # CRUD Movies
 - View Movies X
@@ -13,13 +14,15 @@
 - Editing Movies X
 - Removing Movies X
 - Validating Fields
+- Fade Effects X
 
 # CRUD Users
-- View Users 
-- Adding Users 
-- Editing Users 
-- Removing Users 
+- View Users X
+- Adding Users X
+- Editing Users X
+- Removing Users X 
 - Validating Fields
+- Fade Effects X
 
 # CRUD Students
 - View Students X
@@ -27,3 +30,4 @@
 - Editing Students X
 - Removing Students X
 - Validating Fields
+- Fade Effects X

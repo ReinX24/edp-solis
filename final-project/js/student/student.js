@@ -6,10 +6,12 @@ $(document).ready(function () {
 			// crossDomain: true,
 			dataType: "json",
 			success: function (response) {
+
+				$("#studentTable").hide();
 				// console.log(response);
 				// Adding the elements to our page
 				response.forEach((responseItem) => {
-					// console.log(responseItem);
+					console.log(responseItem);
 					const newRow = document.createElement("tr");
 
 					const id = document.createElement("td");
@@ -101,7 +103,7 @@ $(document).ready(function () {
 
 					newRow.append(operationsData);
 
-					$("#studentTable").append(newRow);
+					$("#studentTable").append(newRow).fadeIn(1000);
 				});
 			},
 		});
@@ -127,17 +129,19 @@ $(document).ready(function () {
 		const studentData = {
 			fname: firstName,
 			lname: lastName,
-			gender: gender,
 			email: email,
 			student_number: studentNumber,
 			section: section,
 			year_level: yearLevel,
+			gender: gender,
+			contact_number: contactNumber,
 			address: address,
 			city: city,
-			contact_number: contactNumber,
-			postal_code: postalCode,
 			state: state,
+			postal_code: postalCode,
 		};
+
+		console.log(studentData);
 
 		// Add data to endpoint
 		$.ajax({
@@ -146,7 +150,7 @@ $(document).ready(function () {
 			data: studentData,
 			dataType: "json",
 			success: function (response) {
-				// $("#studentTable").html("");
+				$("#studentTable").html("");
 				// alert("Successfully added student!");
 				$("#addStudentModal").modal("toggle");
 				$("#addSuccessModal").modal("toggle");

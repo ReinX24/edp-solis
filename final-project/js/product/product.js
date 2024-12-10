@@ -6,6 +6,9 @@ $(document).ready(function () {
 			url: "https://finalproject.site/api/v1/products",
 			dataType: "json",
 			success: function (response) {
+
+				$("#productsTableBody").hide();
+
 				// Adding the elements to our page
 				response.forEach((product) => {
 					// console.log(product);
@@ -78,6 +81,8 @@ $(document).ready(function () {
 					newRow.append(operationsData);
 
 					$("#productsTableBody").append(newRow);
+
+					$("#productsTableBody").fadeIn(1000);
 				});
 			},
 		});

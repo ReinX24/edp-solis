@@ -1,5 +1,7 @@
 $(document).ready(function () {
+
 	$("#studentForm").hide();
+
 	const queryString = window.location.search;
 	const urlParams = new URLSearchParams(queryString);
 
@@ -28,7 +30,7 @@ $(document).ready(function () {
 			$("#postalCode").val(response.postal_code);
 			$("#state").val(response.state);
 
-			$("#studentForm").fadeIn(2000);
+			$("#studentForm").fadeIn(1000);
 		},
 	});
 

@@ -1,4 +1,7 @@
 $(document).ready(function () {
+
+	$("#studentForm").hide();
+
 	const queryString = window.location.search;
 	const urlParams = new URLSearchParams(queryString);
 
@@ -27,8 +30,8 @@ $(document).ready(function () {
 			$("#contactNumber").val(response.contact_number);
 			$("#postalCode").val(response.postal_code);
 			$("#state").val(response.state);
-			// console.log(response);
-			// Adding the elements to our page
+
+			$("#studentForm").fadeIn(1000);
 		},
 	});
 

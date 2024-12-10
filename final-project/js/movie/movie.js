@@ -1,4 +1,6 @@
 $(document).ready(function () {
+	$("#moviesTableBody").hide();
+
 	function fetchMovieData() {
 		$.ajax({
 			type: "GET",
@@ -6,7 +8,9 @@ $(document).ready(function () {
 			dataType: "json",
 			success: function (response) {
 				response.forEach((movie) => {
+
 					console.log(movie);
+
 					const newRow = document.createElement("tr");
 
 					const id = document.createElement("th");
@@ -88,7 +92,9 @@ $(document).ready(function () {
 
 					newRow.append(operationsData);
 
-					$("#productsTableBody").append(newRow);
+					$("#moviesTableBody").append(newRow);
+
+					$("#moviesTableBody").fadeIn(1000);
 				});
 			},
 		});
@@ -118,6 +124,7 @@ $(document).ready(function () {
 			data: newMovieData,
 			dataType: "json",
 			success: function (response) {
+				$("#moviesTableBody").hide();
 				$("#addMovieModal").modal("toggle");
 				$("#addSuccessModal").modal("toggle");
 				fetchMovieData();
