@@ -36,75 +36,49 @@
         </div>
     </nav>
     <div class="container pb-2 pt-4">
-        <h1 class="mt-4 pt-3">Edit Student</h1>
-        <form id="studentForm">
+        <h1 class="mt-4 pt-4">Delete User</h1>
+        <form id="userForm">
             <div class="mb-3">
                 <label for="firstName" class="form-label">First Name</label>
-                <input type="text" id="firstName" class="form-control">
+                <input type="text" id="firstName" class="form-control" disabled>
             </div>
 
             <div class="mb-3">
                 <label for="lastName" class="form-label">Last Name</label>
-                <input type="text" id="lastName" class="form-control">
+                <input type="text" id="lastName" class="form-control" disabled>
             </div>
 
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" id="email" class="form-control">
+                <input type="email" id="email" class="form-control" disabled>
             </div>
 
             <div class="mb-3">
-                <label for="gender" class="form-label">Gender</label>
-                <input type="text" id="gender" class="form-control">
-            </div>
-
-            <div class="mb-3">
-                <label for="studentNumber" class="form-label">Student Number</label>
-                <input type="text" id="studentNumber" class="form-control">
-            </div>
-
-            <div class="mb-3">
-                <label for="section" class="form-label">Section</label>
-                <input type="text" id="section" class="form-control">
-            </div>
-
-            <div class="mb-3">
-                <label for="yearLevel" class="form-label">Year Level</label>
-                <!-- <input type="text" id="yearLevel" class="form-control"> -->
-                <select class="form-select" id="yearLevel">
-                    <option value="First">First</option>
-                    <option value="Second">Second</option>
-                    <option value="Third">Third</option>
-                    <option value="Fourth">Fourth</option>
-                </select>
+                <label for="phoneNumber" class="form-label">Phone Number</label>
+                <input type="text" id="phoneNumber" class="form-control" disabled>
             </div>
 
             <div class="mb-3">
                 <label for="address" class="form-label">Address</label>
-                <input type="text" id="address" class="form-control">
+                <input type="text" id="address" class="form-control" disabled>
             </div>
 
             <div class="mb-3">
                 <label for="city" class="form-label">City</label>
-                <input type="text" id="city" class="form-control">
-            </div>
-
-            <div class="mb-3">
-                <label for="contactNumber" class="form-label">Contact Number</label>
-                <input type="text" id="contactNumber" class="form-control">
-            </div>
-
-            <div class="mb-3">
-                <label for="postalCode" class="form-label">Postal Code</label>
-                <input type="text" id="postalCode" class="form-control">
+                <input type="text" id="city" class="form-control" disabled>
             </div>
 
             <div class="mb-3">
                 <label for="state" class="form-label">State</label>
-                <input type="text" id="state" class="form-control">
+                <input type="text" id="state" class="form-control" disabled>
             </div>
 
-            <button id="updateStudentBtn" type="submit" class="btn btn-primary my-2">Update Student</a>
+            <div class="mb-3">
+                <label for="postalCode" class="form-label">Postal Code</label>
+                <input type="text" id="postalCode" class="form-control" disabled>
+            </div>
+
+            <button id="deleteUserBtn" type="submit" class="btn btn-danger my-2">Delete User</a>
         </form>
     </div>
 
@@ -112,7 +86,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="../js/jquery.min.js"></script>
-    <script src="../js/student/student_edit.js"></script>
+    <script src="../js/user/user_delete.js"></script>
 </body>
 
 </html>

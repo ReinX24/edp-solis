@@ -35,9 +35,12 @@
             </div>
         </div>
     </nav>
-    <div class="container py-2">
-        <h1>Student Info</h1>
-        <a href="student_add.html" class="btn btn-primary my-2">Add Student</a>
+    <div class="container pb-2 pt-4">
+        <h1 class="mt-4 pt-4">Student Info</h1>
+        <!-- <a href="student_add.html" class="btn btn-primary my-2">Add Student</a> -->
+        <button type="button" class="btn btn-primary my-2" data-bs-toggle="modal" data-bs-target="#addStudentModal">
+            Add Student
+        </button>
         <table class="table table-sm table-responsive">
             <thead>
                 <tr>
@@ -61,6 +64,113 @@
             </tbody>
         </table>
     </div>
+
+    <!-- Add Student Modal -->
+    <div class="modal fade" id="addStudentModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-2" id="exampleModalLabel">Add Student</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="studentForm">
+                        <div class="mb-3">
+                            <label for="firstName" class="form-label">First Name</label>
+                            <input type="text" id="firstName" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="lastName" class="form-label">Last Name</label>
+                            <input type="text" id="lastName" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="gender" class="form-label">Gender</label>
+                            <input type="text" id="gender" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="studentNumber" class="form-label">Student Number</label>
+                            <input type="text" id="studentNumber" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="section" class="form-label">Section</label>
+                            <input type="text" id="section" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="yearLevel" class="form-label">Year Level</label>
+                            <!-- <input type="text" id="yearLevel" class="form-control"> -->
+                            <select class="form-select" id="yearLevel">
+                                <option value="First" selected>First</option>
+                                <option value="Second">Second</option>
+                                <option value="Third">Third</option>
+                                <option value="Fourth">Fourth</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Address</label>
+                            <input type="text" id="address" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="city" class="form-label">City</label>
+                            <input type="text" id="city" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="contactNumber" class="form-label">Contact Number</label>
+                            <input type="text" id="contactNumber" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="postalCode" class="form-label">Postal Code</label>
+                            <input type="text" id="postalCode" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="state" class="form-label">State</label>
+                            <input type="text" id="state" class="form-control">
+                        </div>
+
+                        <!-- <button id="submitStudentBtn" type="submit" class="btn btn-primary my-2">Add Student</a> -->
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <!-- <button id="submitProductBtn" type="submit" class="btn btn-primary my-2">Add
+                        Product</button> -->
+                    <button id="submitStudentBtn" type="submit" class="btn btn-primary my-2">Add Student</a>
+                        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Add Product Modal -->
+
+    <!-- Successfully Added Modal -->
+    <div class="modal fade" id="addSuccessModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-2" id="exampleModalLabel">Successfully Added Student!</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of successfully added modal-->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

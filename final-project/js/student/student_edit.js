@@ -15,6 +15,13 @@ $(document).ready(function () {
 			$("#studentNumber").val(response.student_number);
 			$("#section").val(response.section);
 			$("#yearLevel").val(response.year_level);
+
+			$(`select option[value='${response.year_level}']`).attr(
+				"selected",
+				"selected"
+			);
+			// document.getElementById("yearLevel").options.selectedIndex = response.year_level;
+
 			$("#address").val(response.address);
 			$("#city").val(response.city);
 			$("#contactNumber").val(response.contact_number);
@@ -56,20 +63,22 @@ $(document).ready(function () {
 			state: state,
 		};
 
-		console.log(studentData);
+		// console.log(studentData);
 
 		$.ajax({
 			type: "PUT",
-			url: "https://finalproject.site/api/v1/students/" + urlParams.get("id"),
+			url:
+				"https://finalproject.site/api/v1/students/" +
+				urlParams.get("id"),
 			data: studentData,
 			dataType: "json",
 			success: function (response) {
 				alert("Successfully updated student!");
 				// Redirect to products index page
-				window.location.href = "/final-project/product/product.html";
+				window.location.href = "/final-project/student/student.html";
 			},
 			error: function (e) {
-				console.log(e);
+				alert("An error has occurred!");
 			},
 		});
 	});

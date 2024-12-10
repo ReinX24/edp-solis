@@ -1,6 +1,29 @@
 # TODO LIST
 
-- CRUD User (Next)
-- CRUD Student (Current)
-- CRUD Movie (Last)
-- CRUD Products X
+# CRUD Products
+- View Products X
+- Adding Products X
+- Editing Products X
+- Removing Products X
+- Validating Fields
+
+# CRUD Movies
+- View Movies X
+- Adding Movies X
+- Editing Movies X
+- Removing Movies X
+- Validating Fields
+
+# CRUD Users
+- View Users 
+- Adding Users 
+- Editing Users 
+- Removing Users 
+- Validating Fields
+
+# CRUD Students
+- View Students X
+- Adding Students X 
+- Editing Students X
+- Removing Students X
+- Validating Fields

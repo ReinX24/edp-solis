@@ -34,6 +34,7 @@ $(document).ready(function () {
 			// crossDomain: true,
 			// dataType: "json",
 			success: function (response) {
+				alert("Successfully deleted product!");
 				window.location.href = "/final-project/product/product.html";
 			},
 			error: function(e) {
