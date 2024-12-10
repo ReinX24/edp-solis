@@ -7,15 +7,51 @@
     <title>Event-Driven Programming - Final Project</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
-    <div class="container p-4">
-        <h1>Final Project</h1>
-        <a class="btn btn-primary" href="user/user.html">User Info</a>
-        <a class="btn btn-primary" href="student/student.html">Student Info</a>
-        <a class="btn btn-primary" href="movie/movie.html">Movie Info</a>
-        <a class="btn btn-primary" href="product/product.html">Product Info</a>
+    <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">Final Project</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/final-project/user/user.html">User</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/final-project/student/student.html">Student</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/final-project/movie/movie.html">Movie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/final-project/product/product.html">Products</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container py-2 pt-4">
+        <h1 class="mt-4 pt-4">Final Project</h1>
+        <h2>Group 8</h2>
+        <ul class="list-group my-4">
+            <li class="list-group-item">Leader: Solis, Rein Aldwin E.</li>
+            <li class="list-group-item">Ferrer, Brian A.</li>
+            <li class="list-group-item">Lacaste, Vincent Raphael M.</li>
+            <li class="list-group-item">Manglicmot, John Paul A.</li>
+            <li class="list-group-item">Roquiza, Nathaniel C.</li>
+        </ul>
+        <div class="d-flex justify-content-around">
+            <a class="btn btn-lg btn-primary" href="user/user.html">User Info <i class="bi bi-universal-access"></i></a>
+            <a class="btn btn-lg btn-primary" href="student/student.html">Student Info <i class="bi bi-backpack"></i></a>
+            <a class="btn btn-lg btn-primary" href="movie/movie.html">Movie Info <i class="bi bi-camera-reels-fill"></i></a>
+            <a class="btn btn-lg btn-primary" href="product/product.html">Product Info <i class="bi bi-boxes"></i></a>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
