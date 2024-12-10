@@ -1,33 +1,9 @@
 $(document).ready(function () {
-	const queryString = window.location.search;
-	const urlParams = new URLSearchParams(queryString);
-
-	$.ajax({
-		type: "GET",
-		url: "https://finalproject.site/api/v1/students/" + urlParams.get("id"),
-		crossDomain: true,
-		dataType: "json",
-		success: function (response) {
-			$("#firstName").val(response.fname);
-			$("#lastName").val(response.lname);
-			$("#email").val(response.email);
-			$("#gender").val(response.gender);
-			$("#studentNumber").val(response.student_number);
-			$("#section").val(response.section);
-			$("#yearLevel").val(response.year_level);
-			$("#address").val(response.address);
-			$("#city").val(response.city);
-			$("#contactNumber").val(response.contact_number);
-			$("#postalCode").val(response.postal_code);
-			$("#state").val(response.state);
-			// console.log(response);
-			// Adding the elements to our page
-		},
-	});
-
-	$("#updateStudentBtn").click(function (e) {
+	// Listen for submit event
+	$("#submitStudentBtn").click(function (e) {
 		e.preventDefault();
 
+		// Get all variables from page
 		const firstName = $("#firstName").val();
 		const lastName = $("#lastName").val();
 		const email = $("#email").val();
@@ -58,13 +34,16 @@ $(document).ready(function () {
 
 		console.log(studentData);
 
+		// TODO: validate fields
+
+		// Add data to endpoint
 		$.ajax({
-			type: "PUT",
-			url: "https://finalproject.site/api/v1/students/" + urlParams.get("id"),
+			type: "POST",
+			url: "https://finalproject.site/api/v1/students",
 			data: studentData,
 			dataType: "json",
 			success: function (response) {
-				alert("Successfully updated student!");
+				alert("Successfully added student!");
 				// Redirect to products index page
 				window.location.href = "/final-project/product/product.html";
 			},

@@ -5,9 +5,10 @@ $(document).ready(function () {
 		// crossDomain: true,
 		dataType: "json",
 		success: function (response) {
-			console.log(response);
+			// console.log(response);
 			// Adding the elements to our page
 			response.forEach((responseItem) => {
+				// console.log(responseItem);
 				const newRow = document.createElement("tr");
 
 				const id = document.createElement("td");
@@ -25,10 +26,30 @@ $(document).ready(function () {
 
 				newRow.append(lastName);
 
+				const gender = document.createElement("td");
+				gender.textContent = responseItem.gender;
+
+				newRow.append(gender);
+
 				const email = document.createElement("td");
 				email.textContent = responseItem.email;
 
 				newRow.append(email);
+
+				const studentNumber = document.createElement("td");
+				studentNumber.textContent = responseItem.student_number;
+
+				newRow.append(studentNumber);
+
+				const section = document.createElement("td");
+				section.textContent = responseItem.section;
+
+				newRow.append(section);
+
+				const yearLevel = document.createElement("td");
+				yearLevel.textContent = responseItem.year_level;
+
+				newRow.append(yearLevel);
 
 				const address = document.createElement("td");
 				address.textContent = responseItem.address;
@@ -50,25 +71,10 @@ $(document).ready(function () {
 
 				newRow.append(postalCode);
 
-				const section = document.createElement("td");
-				section.textContent = responseItem.section;
-
-				newRow.append(section);
-
 				const state = document.createElement("td");
 				state.textContent = responseItem.state;
 
 				newRow.append(state);
-
-				const studentNumber = document.createElement("td");
-				studentNumber.textContent = responseItem.student_number;
-
-				newRow.append(studentNumber);
-
-				const yearLevel = document.createElement("td");
-				yearLevel.textContent = responseItem.year_level;
-
-				newRow.append(yearLevel);
 
 				const operationsData = document.createElement("td");
 				const operationsContainer = document.createElement("div");
