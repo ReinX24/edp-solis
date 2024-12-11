@@ -6,7 +6,6 @@ $(document).ready(function () {
 			url: "https://finalproject.site/api/v1/users",
 			dataType: "json",
 			success: function (response) {
-
 				$("#usersTableBody").hide();
 
 				response.forEach((user) => {

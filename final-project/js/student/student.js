@@ -6,7 +6,6 @@ $(document).ready(function () {
 			// crossDomain: true,
 			dataType: "json",
 			success: function (response) {
-
 				$("#studentTable").hide();
 				// console.log(response);
 				// Adding the elements to our page
@@ -114,7 +113,13 @@ $(document).ready(function () {
 
 		// Get all variables from page
 		const firstName = $("#firstName").val();
+
+		const middleName = $("#middleName").val();
+
 		const lastName = $("#lastName").val();
+
+		const birthDate = $("#birthDate").val();
+
 		const email = $("#email").val();
 		const gender = $("#gender").val();
 		const studentNumber = $("#studentNumber").val();
@@ -126,9 +131,17 @@ $(document).ready(function () {
 		const postalCode = $("#postalCode").val();
 		const state = $("#state").val();
 
+		//! mname and birthdate does not work currently
+
 		const studentData = {
 			fname: firstName,
+
+			// mname: middleName,
+
 			lname: lastName,
+
+			// birthdate: birthDate,
+
 			email: email,
 			student_number: studentNumber,
 			section: section,
