@@ -1,7 +1,8 @@
 /* Custom CSS */
 body {
   padding: 20px;
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-family: "Inter", sans-serif;
   background: #27292c;
   color: white;
 }
@@ -10,16 +11,27 @@ h1 {
   margin-top: 30px;
 }
 
-.nav-list {
-  list-style: none;
-  display: flex;
-  justify-content: space-evenly;
-  border: 1px solid red;
-}
-
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+
+.nav-logo {
+  min-width: 55px;
+  /* border: 1px solid red; */
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  /* border: 1px solid red; */
+}
+
+.nav-list-item {
+  margin-right: 2rem;
+  font-size: 1.1rem;
 }
 
 /* Original CSS */
