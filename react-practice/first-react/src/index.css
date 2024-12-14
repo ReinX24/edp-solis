@@ -7,10 +7,11 @@ body {
 	padding: 0;
 	margin: 0;
 	font-family: "Inter", sans-serif;
+	background-color: #282d35;
+	color: white;
 }
 
 header {
-	height: 90px;
 	background: #21222a;
 }
 
@@ -18,7 +19,7 @@ header {
 	display: flex;
 	align-items: center;
 	gap: 1rem;
-  padding-left: 1rem;
+	padding-left: 1rem;
 }
 
 .navbar > img {
@@ -29,6 +30,30 @@ header {
 	color: #61dbfb;
 	font-size: 1.75rem;
 	font-weight: 700;
+}
+
+.main-content {
+	padding: 1rem;
+}
+
+.main-content h1 {
+	margin: 0;
+	font-size: 2.5rem;
+}
+
+.facts-list {
+	margin-top: 1rem;
+	max-width: 400px;
+}
+
+.facts-list > li {
+	/* Margin top and bottom */
+	margin-block: 1rem;
+	line-height: 1rem;
+}
+
+.facts-list > li::marker {
+	color: #61dbfb;
 }
 
 /* .header {
