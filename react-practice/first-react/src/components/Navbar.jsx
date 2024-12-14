@@ -1,5 +1,12 @@
 function Navbar() {
-	return <h1>Navbar goes here</h1>;
+	return (
+		<header>
+			<nav className="navbar">
+				<img src="/src/assets/react.svg" alt="react-logo" />
+				<p>ReactFacts</p>
+			</nav>
+		</header>
+	);
 }
 
 export default Navbar;
