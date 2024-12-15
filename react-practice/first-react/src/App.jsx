@@ -8,7 +8,7 @@ function App() {
 		<Fragment>
 			<Navbar />
 			<Main />
-			<Footer />
+			{/* <Footer /> */}
 		</Fragment>
 	);
 }
