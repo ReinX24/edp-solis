@@ -28,11 +28,3 @@ body {
 #entry-container {
   display: flex;
 }
-
-#google-maps-container {
-  display: flex;
-}
-
-#google-maps-container > img {
-  border: 1px solid red;
-}
